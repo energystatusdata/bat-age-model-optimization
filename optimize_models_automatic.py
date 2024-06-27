@@ -206,8 +206,8 @@ COLUMN_DTYPES = {
 # --- other constants --------------------------------------------------------------------------------------------------
 # ToDo: select numbers of CPU cors used for optimization (to run parallel instances of optimization, e.g., to compare
 #  different models or optimizers)
-# NUMBER_OF_PROCESSORS_TO_USE = 1  # only use one core
-NUMBER_OF_PROCESSORS_TO_USE = math.ceil(multiprocessing.cpu_count() / 4)  # use 25% of the cores
+NUMBER_OF_PROCESSORS_TO_USE = 1  # only use one core
+# NUMBER_OF_PROCESSORS_TO_USE = math.ceil(multiprocessing.cpu_count() / 4)  # use 25% of the cores
 # NUMBER_OF_PROCESSORS_TO_USE = math.ceil(multiprocessing.cpu_count() / 2)  # use 50% of the cores
 # NUMBER_OF_PROCESSORS_TO_USE = max(multiprocessing.cpu_count() - 1, 1)  # leave one free
 # NUMBER_OF_PROCESSORS_TO_USE = multiprocessing.cpu_count()  # use all cores
