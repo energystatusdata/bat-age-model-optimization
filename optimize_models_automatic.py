@@ -39,7 +39,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 # from lmfit import Model
 from scipy import optimize
-import math
+# import math
 # import pyarrow as pa
 from enum import IntEnum
 import config_labels as csv_label
@@ -2003,10 +2003,6 @@ def model_f013_get_delta_age(log_df, a0, a1, a2, a3, a4, a5, a6, a7, a8):
     )
     cyclic_age_potential = (a4 * log_df[LABEL_C_CHG].astype(np.float64) * t_func  # a4 * dQ_chg
                             * (log_df[csv_label.V_CELL].astype(np.float64) - V_mid)**2)
-
-    # FIXME: consider introducing discharge current related aging (gas generation?? SEI cracking? electrolyte
-    #  decomposition? SEI growth as well? graphite exfoliation? electrode particle fracture/cracking? current collector
-    #  corrosion? structural disordering? loss of electrical contact?)
 
     # dq_cyclic_age_weardown = a7 * log_df[LABEL_C_CHG] * t_func  # a7 * dQ_chg
     # q_cyclic_age_weardown = dq_cyclic_age_weardown.cumsum()
