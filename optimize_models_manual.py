@@ -85,11 +85,11 @@ model_f056_error_var_dependency = [P, Z, Z, N,   P, P, N, N,   P, P, P, P, P, P,
 # CELL_PARAMETERS_USE = list(range(65, 77))  # all profile aging cells
 CELL_PARAMETERS_USE = list(range(0, 77))  # all calendar + cyclic + profile aging cells
 
-# RESOLUTION_USE = [2, 30]  # if None, use log_gae file with any time resolution. If >0, only use the one with specified
+# RESOLUTION_USE = [2, 30]  # if None, use log_age file with any time resolution. If >0, only use the one with specified
 #   resolution. helpful if multiple resolutions in the same folder, e.g., RESOLUTION_USE = [30] -> only use log_age_30s
 # RESOLUTION_USE = [4, 30]
 # RESOLUTION_USE = [10, 30]
-RESOLUTION_USE = [30]
+RESOLUTION_USE = [30]  # use [2, 30] if you also want to include the WLTP cycling data but didn't generate a log_age_30s
 # RESOLUTION_USE = [60]
 
 # see prepare_cell_log_df(..., use_cap_nom, use_t_prod, ...) for the following settings
